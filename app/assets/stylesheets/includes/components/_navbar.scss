@@ -1,31 +1,36 @@
 .navbar {
   background: $navbar-bg;
   box-shadow: 0 0 4px $box-shadow-color;
-  padding: 1rem 1rem;
+  padding: 1rem;
 
   ul {
     @extend %pull-clearfix;
   }
 
   li {
-    float: left;
     border-right: 1px solid $navbar-li-border-color;
-    padding-right: 0.8rem;
+    float: left;
+    padding-right: .8rem;
 
     &.pull-right {
       @extend %pull-right;
     }
 
     & + li {
-      margin-left: 0.8rem;
+      margin-left: .8rem;
     }
   }
 
   a {
     color: $navbar-link-color;
+    transition: color $transition-speed linear;
 
     &:visited {
       color: $navbar-link-color;
+    }
+
+    &:hover {
+      color: $navbar-link-hover-color;
     }
   }
 }

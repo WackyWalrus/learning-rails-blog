@@ -4,10 +4,9 @@
 		<p><%= truncate(@post.content, length: 50) %></p>
 		<div class="credits">
 			Author: <%= link_to @post.user.name, @post.user %>
-			<% if @display_edit %>
+			<% if @display_edit && @current_user && @current_user.id === @post.user.id %>
 				&nbsp;|&nbsp;<%= link_to "Edit Post", "/posts/#{@post.id}/edit" %>
 			<% end %>
 		</div>
-
 	</div>
 </article>

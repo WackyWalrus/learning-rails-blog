@@ -13,8 +13,8 @@ class UsersController < ApplicationController
 	end
 
 	def logout
-		logout_get if request.get?
-		logout_post if request.post?
+		reset_session
+		redirect_to '/'
 	end
 
 	def create
@@ -56,14 +56,6 @@ class UsersController < ApplicationController
 				end
 			end
 
-			redirect_to '/'
-		end
-
-		def logout_get
-		end
-
-		def logout_post
-			reset_session
 			redirect_to '/'
 		end
 end

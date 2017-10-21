@@ -1,9 +1,19 @@
+$light-gray: #888;
+$dark-gray: #666;
+
 $link-color: #00f;
 
-$border-color: #888;
+$border-color: $light-gray;
 
-$navbar-bg: #666;
-$navbar-link-color: #efefef ;
+$navbar-bg: $dark-gray;
+$navbar-link-color: #efefef;
+$navbar-link-hover-color: #a1a1a1;
 $navbar-li-border-color: $border-color;
 
 $box-shadow-color: rgba(0, 0, 0, .8);
+
+$button-bg: $light-gray;
+$button-color: #fff;
+$button-hover-bg: $dark-gray;
+
+$transition-speed: .1s;
