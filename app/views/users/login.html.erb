@@ -1,0 +1,11 @@
+<%= form_for User.new, url: '/login' do |form| %>
+	<div>
+		<%= form.label :email %>
+		<%= form.text_field :email %>
+	</div>
+	<div>
+		<%= form.label :password %>
+		<%= form.password_field :password %>
+	</div>
+	<%= form.submit "Login" %>
+<% end %>

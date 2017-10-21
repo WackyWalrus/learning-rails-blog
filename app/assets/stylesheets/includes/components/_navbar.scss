@@ -1,0 +1,20 @@
+.navbar {
+  background: $navbar-bg;
+  padding: 1rem 1rem;
+
+  ul {
+    @extend %pull-clearfix;
+  }
+
+  li {
+    float: left;
+
+    &.pull-right {
+      @extend %pull-right;
+    }
+
+    & + li {
+      margin-left: 10px;
+    }
+  }
+}

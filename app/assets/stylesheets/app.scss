@@ -1,0 +1,41 @@
+@import './includes/vars';
+@import './includes/helpers';
+@import './includes/components/navbar';
+@import './includes/components/posts';
+@import './includes/components/users';
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:visited {
+    color: $link-color;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+.content {
+  padding: 1rem;
+}
