@@ -3,11 +3,8 @@
 <% if @user.posts %>
 	<h3>Posts</h3>
 <% end %>
-<% @user.posts.each do |post| %>
-	<article>
-		<div class="post">
-			<h4><%= link_to post.title, post %></h4>
-			<p><%= truncate(post.content, length: 50) %></p>
-		</div>
-	</article>
+<% @user.posts.each do |post|
+	@post = post
+	@display_edit = :true %>
+	<%= render partial: '/posts/post', locals: { post: @post, display_edit: @display_edit, current_user: @current_user } %>
 <% end %>

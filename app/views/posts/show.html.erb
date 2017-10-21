@@ -1,14 +1,5 @@
 <% current_user %>
 
-<article>
-	<div class="post">
-		<h2><%= @post.title %></h2>
-		<%= simple_format(@post.content) %>
+<% @display_edit = :true %>
 
-		Author: <%= link_to @post.user.name, @post.user %>
-	</div>
-</article>
-
-<% if @current_user.id === @post.user.id %>
-	<%= link_to "Edit Post", edit_post_url %>
-<% end %>
+<%= render 'post', locals: { post: @post, display_edit: @display_edit, current_user: @current_user } %>
