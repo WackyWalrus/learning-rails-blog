@@ -3,3 +3,5 @@
 <% @display_edit = :true %>
 
 <%= render 'post', locals: { post: @post, display_edit: @display_edit, current_user: @current_user } %>
+
+<%= render partial: 'comments/form', locals: { post: @post, comment: @comment } %>
