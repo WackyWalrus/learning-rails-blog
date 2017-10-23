@@ -1,0 +1,9 @@
+<% @comments.each do |comment| 
+	@commenter = User.find(comment.user_id) %>
+	<div class="comment">
+		<%= comment.content %>
+		<div class="credits">
+			<%= link_to @commenter.name, @commenter %>
+		</div>
+	</div>
+<% end %>

@@ -1,7 +1,9 @@
-<%= form_for @comment do |form| %>
-	<div class="field-controller">
-		<%= form.label :content %>
-		<%= form.text_area :content %>
-	</div>
-	<%= form.submit "Comment" %>
+<% if @current_user %>
+	<%= form_for [@post, @comment] do |form| %>
+		<div class="field-controller">
+			<%= form.label :content, "Comment" %>
+			<%= form.text_area :content %>
+		</div>
+		<%= form.submit %>
+	<% end %>
 <% end %>

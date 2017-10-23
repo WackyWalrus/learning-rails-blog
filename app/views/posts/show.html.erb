@@ -4,4 +4,6 @@
 
 <%= render 'post', locals: { post: @post, display_edit: @display_edit, current_user: @current_user } %>
 
-<%= render partial: 'comments/form', locals: { post: @post, comment: @comment } %>
+<%= render 'comments/form', locals: { post: @post, comment: @comment, current_user: @current_user } %>
+
+<%= render 'comments/list', locals: { post: @post, comments: @comments } %>
