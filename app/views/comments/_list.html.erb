@@ -1,4 +1,4 @@
-<% @comments.each do |comment| 
+<% @post.comments.reverse.each do |comment| 
 	@commenter = User.find(comment.user_id) %>
 	<div class="comment">
 		<%= comment.content %>

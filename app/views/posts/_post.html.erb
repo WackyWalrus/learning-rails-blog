@@ -3,7 +3,7 @@
 		<h3><%= link_to @post.title, @post %></h3>
 		<p><%= truncate(@post.content, length: 50) %></p>
 		<div class="credits">
-			Author: <%= link_to @post.user.name, @post.user %> | <%= @post.created_at.strftime("%m/%d/%Y %I:%M%p") %>
+			Author: <%= link_to @post.user.name, @post.user %> | <%= @post.created_at.strftime("%m/%d/%Y %I:%M%p") %> | <%= pluralize(@post.comments.count, 'comment') %>
 			<% if @display_edit && @current_user && @current_user.id === @post.user.id %>
 				&nbsp;|&nbsp;<%= link_to "Edit Post", "/posts/#{@post.id}/edit" %>
 			<% end %>

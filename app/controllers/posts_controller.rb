@@ -5,8 +5,6 @@ class PostsController < ApplicationController
 		@post = Post.find_by(id: params[:id])
 		@comment = Comment.new
 		@comment.post_id = @post.id
-
-		@comments = Comment.where(post_id: @post.id).reverse
 	end
 
 	def index
