@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 		@comment = Comment.new
 		@comment.post_id = @post.id
 
-		@comments = Comment.where(post_id: @post.id)
+		@comments = Comment.where(post_id: @post.id).reverse
 	end
 
 	def index
