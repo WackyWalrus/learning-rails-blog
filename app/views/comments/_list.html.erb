@@ -3,7 +3,7 @@
 	<div class="comment">
 		<%= comment.content %>
 		<div class="credits">
-			<%= link_to @commenter.name, @commenter %>
+			<%= link_to @commenter.name, @commenter %> | <%= comment.created_at.strftime("%m/%d/%Y %I:%M%p") %>
 		</div>
 	</div>
 <% end %>
